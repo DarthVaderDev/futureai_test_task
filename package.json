@@ -1,0 +1,49 @@
+{
+	"name": "task-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@firebase/auth": "^1.7.9",
+		"@firebase/firestore": "^4.7.3",
+		"@hookform/resolvers": "^3.9.0",
+		"config": "^3.3.12",
+		"cookie": "^0.7.2",
+		"firebase": "^10.14.0",
+		"firebase-admin": "^12.6.0",
+		"js-cookie": "^3.0.5",
+		"next": "14.2.14",
+		"nodemailer": "^6.9.15",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-hook-form": "^7.53.0",
+		"uuid": "^10.0.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.25.7",
+		"@babel/preset-env": "^7.25.7",
+		"@babel/preset-react": "^7.25.7",
+		"@babel/preset-typescript": "^7.25.7",
+		"@types/js-cookie": "^3.0.6",
+		"@types/node": "^20",
+		"@types/nodemailer": "^6.4.16",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@types/testing-library__jest-dom": "^6.0.0",
+		"@types/uuid": "^10.0.0",
+		"babel-jest": "^29.7.0",
+		"eslint": "^8",
+		"eslint-config-next": "14.2.14",
+		"jest-environment-jsdom": "^29.7.0",
+		"postcss": "^8",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.6.3"
+	}
+}
