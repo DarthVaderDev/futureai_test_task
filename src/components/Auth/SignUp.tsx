@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
-} from 'firebase/auth';
-import { doc, setDoc } from '@firebase/firestore';
-import { auth, firestore } from '@/firebase/firebaseClient';
-import Cookies from 'js-cookie';
+} from "firebase/auth";
+import { doc, setDoc } from "@firebase/firestore";
+import { auth, firestore } from "@/firebase/firebaseClient";
+import Cookies from "js-cookie";
 
 export const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
 
@@ -29,17 +29,17 @@ export const SignUp = () => {
       );
       const user = userCredential.user;
 
-      await setDoc(doc(firestore, 'users', user.uid), { role });
-      Cookies.set('role', role, { expires: 1 });
+      await setDoc(doc(firestore, "users", user.uid), { role });
+      Cookies.set("role", role, { expires: 1 });
 
-      alert('Signing in successful, please check your email!');
+      alert("Signing in successful, please check your email!");
       await sendEmailVerification(user);
-      setMessage('Verification email sent. Check your inbox.');
+      setMessage("Verification email sent. Check your inbox.");
     } catch (error) {
       if (error instanceof Error) {
         setError(error.message);
       } else {
-        setError('Unknown error occurred');
+        setError("Unknown error occurred");
       }
     }
   };
